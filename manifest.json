@@ -12,10 +12,10 @@
 	"browser_action": {
 		"default_popup": "html/index.html"
 	},
-	"background": {
-		// "page": "html/popup.html",
-		 "scripts": ["js/index.js"]
-	},
+	// "background": {
+	// 	// "page": "html/popup.html",
+	// 	 "scripts": ["js/index.js", "js/fontawesome-all.min.js"]
+	// },
 	// "content_scripts": [
 	// 	{
 	// 		"run_at": "document_end",
@@ -24,6 +24,12 @@
 	// 		"js": ["js/jquery.min.js","js/bundle.js"]
 	// 	}
 	// ],
+	"content_scripts": [
+		{
+			"matches": ["https://www.google.com/*"],
+			"js": ["js/fontawesome.js"]
+		}
+	],
 	"permissions": [
 	    "tabs",
 	    "https://ajax.googleapis.com/",
