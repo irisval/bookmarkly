@@ -1,0 +1,34 @@
+{
+	"manifest_version": 2,
+	"name": "Bookmark.ly",
+	"description": "Easily accessible bookmarks.",
+	"version": "1.0",
+	"icons": {
+		// "16": "icons/ico.png",
+	 //    "32": "icons/ico.png",
+	 //    "48": "icons/ico.png",
+	 //    "128": "icons/ico.png"
+	},
+	"browser_action": {
+		"default_popup": "html/index.html"
+	},
+	"background": {
+		// "page": "html/popup.html",
+		 "scripts": ["js/index.js"]
+	},
+	// "content_scripts": [
+	// 	{
+	// 		"run_at": "document_end",
+	// 		"all_frames": true,
+	// 		"matches": ["https://www.google.com/*"],
+	// 		"js": ["js/jquery.min.js","js/bundle.js"]
+	// 	}
+	// ],
+	"permissions": [
+	    "tabs",
+	    "https://ajax.googleapis.com/",
+	    "contextMenus",
+		"storage",
+		"bookmarks"
+	]
+}
